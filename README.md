@@ -8,9 +8,10 @@ This is built using java spring boot as backend framework and microservices arch
 
 ## Data Flow
 ./assets/Data_flow.png
+![Data Flow](./assets/Data_flow.png)
 
 ## System Architecture
-./assets/System_architecture.png
+![System Architecture](./assets/System_architecture.png)
 
 # Technology Stack
 
