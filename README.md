@@ -6,6 +6,11 @@ This is built using java spring boot as backend framework and microservices arch
 
 # Architecture
 
+## Data Flow
+./assets/Data_flow.png
+
+## System Architecture
+./assets/System_architecture.png
 
 # Technology Stack
 
