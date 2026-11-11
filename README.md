@@ -31,8 +31,28 @@ Authentication: JWT (Access & Refresh Tokens)
  
 # Microservices 
 
-1. Authentication Microservice 
+## 1. Authentication Microservice 
 ![Auth Sequence Diagram](./assets/auth_flow.png)
+
+### Github : https://github.com/Rohithgvmg/expense_tracker_authservice
+
 Handles authentication and authorization of users using JWT access and refresh tokens. 
 
+## 2. User Microservice
+
+Stores User data related to profile , allowing auth service to only save auth related data and perform auth operations only.
+Whenever signup happens, the events are pushed to kafka from auth service, kafka sends to user service, which stores user details in the user service database. 
+
+### Github : https://github.com/Rohithgvmg/expense_tracker_userservice
+
+## 3. Data science Microservice
+
+We send SMS from banks to this service (which uses LLM) and returns structured response 
+
+The response object is stored in ledger service inside expense servcie.
+
+Below is request response image:
+![Data science Diagram](./assets/Ds_LLM.png)
+
+### Github : https://github.com/Rohithgvmg/datascience_service
 
