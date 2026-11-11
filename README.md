@@ -29,7 +29,7 @@ Infrastructure: AWS, Docker, AWS CDK
 Authentication: JWT (Access & Refresh Tokens)
 
  
-# Microservices 
+# Backend Microservices 
 
 ## 1. Authentication Microservice 
 ![Auth Sequence Diagram](./assets/auth_flow.png)
@@ -55,4 +55,29 @@ Below is request response image:
 ![Data science Diagram](./assets/Ds_LLM.png)
 
 ### Github : https://github.com/Rohithgvmg/datascience_service
+
+## 4. Expense Microservice
+
+Expense Microservice stores the expense records received from data science service through kafka. Database used is MySQL
+
+### Github: https://github.com/Rohithgvmg/expense_tracker_expenseservice 
+
+# Frontend Application
+
+React native mobile application 
+
+### Github : https://github.com/Rohithgvmg/expense_tracker-frontend
+
+
+# Infrastructure 
+
+Entire deployment is done using AWS CDK (Cloud development Kit) code creating network stack , kafka and MySQL stack and Microservices stack.
+
+### Github: https://github.com/Rohithgvmg/expense_tracker_awsCDK 
+
+# API Gateway 
+
+Kong serves API Gateway particularl for routing requests to different microservices without frontend needing to know different service addresses. API Gateway is placed in public subnet so that it can be accessed and also ensures every requests route through auth service first.
+
+### Github : https://github.com/Rohithgvmg/expense_tracker_kong
 
